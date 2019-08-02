@@ -15,12 +15,7 @@ const thor = document.getElementById('thor');
 const guardians = document.getElementById('guardians');
 const spider = document.getElementById('spider');
 
-const signOff = document.getElementById('sign-off');
 
-const getIn = document.getElementById('get-in');
-const user = document.getElementById('user');
-const password = document.getElementById('password');
-const passwordError = document.getElementById('password-error');
 const homeView = document.getElementById('home-view');
 const siteHeader = document.getElementById('site-header');
 
