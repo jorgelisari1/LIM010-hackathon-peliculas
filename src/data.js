@@ -18,5 +18,3 @@ const filterForSaga = (pelis, tiposaga) => {
   return pelis.filter(objeto => objeto.Title.search(tiposaga)>=0);
 };
 window.filterForSaga = filterForSaga;
-
-// Hola
