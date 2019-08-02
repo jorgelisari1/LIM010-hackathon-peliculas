@@ -29,7 +29,7 @@ const objMovies = ['Captain America: The First Avenger', 'Iron Man', 'The Incred
 let aux = [];
 let movie;
 for (let i = 0; i < objMovies.length; i++) {
-  movie = `http://www.omdbapi.com/?t=${encodeURI(objMovies[i])}&apikey=1aca2bd9`;
+  movie = `https://www.omdbapi.com/?t=${encodeURI(objMovies[i])}&apikey=1aca2bd9`;
   fetch(movie)
     .then(response => response.json())
     .then(data => {
@@ -102,8 +102,6 @@ const showMovies = (aux) => {
   return (viewMovie);
 };
 
-console.log(showMovies(aux));
-
 const searchMoviesByName = (dataAllMovies, letter) => {
     return dataAllMovies.filter(objeto => objeto.Title.toLowerCase().startsWith(letter));
   };
@@ -127,7 +125,7 @@ const paintAno = (listMovie) => {
 const paintListAno = (data, container) => {
   let template = '';
   for (let i = 0; i < data.length; i++) { 
-    template += `<div class="button"><button style="margin-left: 11px;" class="btn btn-info" type="sumit" onclick="anio(${data[i]})" id="${data[i]}" value="${data[i]}"> ${data[i].toUpperCase()}</button><div>`;    
+    template += `<div class="button"><button class="btn btn-info" type="sumit" onclick="anio(${data[i]})" id="${data[i]}" value="${data[i]}"> ${data[i].toUpperCase()}</button><div>`;    
   }
   container.innerHTML = template;
 };
